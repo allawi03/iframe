@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite autoplay carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+        body {
+            background: #E3E4E3;
+            height: 100vh;
+        }
+
+        @-webkit-keyframes scroll {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(calc(-200px * 5));
+                transform: translateX(calc(-200px * 5));
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(calc(-200px * 5));
+                transform: translateX(calc(-200px * 5));
+            }
+        }
+
+        .slider {
+            align-items: center;
+            display: flex;
+            background: pr;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .slider::before,
+        .slider::after {
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 100px;
+            z-index: 2;
+        }
+
+        .slider::after {
+            right: 0;
+            top: 0;
+            -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            margin: 0 auto;
+            -webkit-animation: scroll 5s linear infinite;
+            animation: scroll 5s linear infinite;
+            display: flex;
+            width: calc(250px * 10);
+        }
+
+        .slide {
+            height: 100px;
+            width: 100px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .slide {
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+            </div>
+                <div class="slide">
+                    <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+                </div>
+                <div class="slide">
+                        <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://drive.google.com/uc?export=view&id=1KRcA_e4IXkhOV8l2L9kCnSXTYbY-FnmS" height="131" width="120" alt="" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
