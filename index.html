@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <style>
         body {
-            background: #E3E4E3;
+            background: #e8f0ec;
             height: 100vh;
         }
 
@@ -18,7 +18,7 @@
             }
             100% {
                 -webkit-transform: translateX(calc(-200px * 5));
-                transform: translateX(calc(-200px * 5));
+                transform: translateX(calc(-200px * 5));                           / 5 is the number of the slides
             }
         }
 
@@ -29,7 +29,7 @@
             }
             100% {
                 -webkit-transform: translateX(calc(-200px * 5));
-                transform: translateX(calc(-200px * 5));
+                transform: translateX(calc(-200px * 5));                   / 5 is the number of the slides
             }
         }
 
@@ -70,14 +70,14 @@
         .slide-track {
             margin: 0 auto;
             -webkit-animation: scroll 5s linear infinite;
-            animation: scroll 5s linear infinite;
+            animation: scroll 5s linear infinite;                            / animation .slide-track
             display: flex;
-            width: calc(250px * 10);
+            width: calc(250px * 10);     / 10 is double the number of the slides
         }
 
         .slide {
             height: 50%;
-            width: 250px;
+            width: 250px;                            / the size of the slide keep adjusting to get a good result
         }
 
         @media screen and (max-width: 768px) {
